@@ -1,7 +1,7 @@
 best <- function(state, outcome) {
     
     directory <- "data"
-    outcomes_data <- c("heart attack", "heart failure","pneumonia")
+    outcomes_data <- c("heart attack", "heart failure", "pneumonia")
     
     
     for (letters in list.files()) {
@@ -11,7 +11,7 @@ best <- function(state, outcome) {
     }
     
     
-    outcome_data <- read.csv("outcome-of-care-measures.csv", colClasses = "character", na.strings="Not Available")
+    outcome_data <- read.csv("outcome-of-care-measures.csv", colClasses = "character", na.strings = "Not Available")
     
     
     if(!(state %in% outcome_data$State)) {
